@@ -3,7 +3,7 @@ kind: ClusterServiceVersion
 metadata:
   annotations:
     alm-examples: >-
-      [{"apiVersion":"mongodb.com/v1","kind":"MongoDbStandalone","metadata":{"name":"my-standalone","namespace":"mongodb"},"spec":{"version":"3.6.3","persistent":false,"project":"my-project","credentials":"my-credentials"}},{"apiVersion":"mongodb.com/v1","kind":"MongoDbReplicaSet","metadata":{"name":"my-replica-set","namespace":"mongodb"},"spec":{"members":3,"version":"3.6.5","persistent":false,"project":"my-project","credentials":"my-credentials"}},{"apiVersion":"mongodb.com/v1","kind":"MongoDbShardedCluster","metadata":{"name":"my-sharded-cluster","namespace":"mongodb"},"spec":{"shardCount": 2, "mongodsPerShardCount": 3, "mongosCount": 2, "configServerCount": 3,"version":"3.6.5","persistent":false,"project":"my-project","credentials":"my-credentials"}}]
+      [{"apiVersion":"mongodb.com/v1","kind":"MongoDbStandalone","metadata":{"name":"my-standalone","namespace":"mongodb"},"spec":{"version":"4.0.2","persistent":false,"project":"my-project","credentials":"my-credentials"}},{"apiVersion":"mongodb.com/v1","kind":"MongoDbReplicaSet","metadata":{"name":"my-replica-set","namespace":"mongodb"},"spec":{"members":3,"version":"4.0.2","persistent":false,"project":"my-project","credentials":"my-credentials"}},{"apiVersion":"mongodb.com/v1","kind":"MongoDbShardedCluster","metadata":{"name":"my-sharded-cluster","namespace":"mongodb"},"spec":{"shardCount": 2, "mongodsPerShardCount": 3, "mongosCount": 2, "configServerCount": 3,"version":"4.0.2","persistent":false,"project":"my-project","credentials":"my-credentials"}}]
   name: mongodboperator.v0.3.2
   namespace: placeholder
 spec:
@@ -41,7 +41,7 @@ spec:
             displayName: Version
             path: version
             x-descriptors:
-              - 'urn:alm:descriptor:com.tectonic.ui:text'
+              - 'urn:alm:descriptor:com.tectonic.ui:label'
         version: v1
       - description: MongoDB Replica Set Deployment
         displayName: MongoDB Replica Set
@@ -63,7 +63,7 @@ spec:
             displayName: Members
             path: members
             x-descriptors:
-              - 'urn:alm:descriptor:com.tectonic.ui:text'
+              - 'urn:alm:descriptor:com.tectonic.ui:label'
           - description: Credentials for Ops Manager or Cloud Manager.
             displayName: Credentials
             path: credentials
@@ -78,7 +78,7 @@ spec:
             displayName: Version
             path: version
             x-descriptors:
-              - 'urn:alm:descriptor:com.tectonic.ui:text'
+              - 'urn:alm:descriptor:com.tectonic.ui:label'
         version: v1
       - description: MongoDB Sharded Cluster Deployment
         displayName: MongoDB Sharded Cluster
@@ -110,27 +110,27 @@ spec:
             displayName: Version
             path: version
             x-descriptors:
-              - 'urn:alm:descriptor:com.tectonic.ui:text'
+              - 'urn:alm:descriptor:com.tectonic.ui:label'
           - description: How many Config Servers will be deployed
             displayName: Config Server Count
             path: configServerCount
             x-descriptors:
-              - 'urn:alm:descriptor:com.tectonic.ui:text'
+              - 'urn:alm:descriptor:com.tectonic.ui:label'
           - description: How many MongoDB Servers per Shard will be deployed
             displayName: MongoDB Servers per Shard
             path: mongodsPerShardCount
             x-descriptors:
-              - 'urn:alm:descriptor:com.tectonic.ui:text'
+              - 'urn:alm:descriptor:com.tectonic.ui:label'
           - description: How many mongos will be deployed
             displayName: Mongos (MongoDB Shard) to be deployed
             path: mongosCount
             x-descriptors:
-              - 'urn:alm:descriptor:com.tectonic.ui:text'
+              - 'urn:alm:descriptor:com.tectonic.ui:label'
           - description: Amount of Shards to be deployed
             displayName: Shards
             path: shardCount
             x-descriptors:
-              - 'urn:alm:descriptor:com.tectonic.ui:text'
+              - 'urn:alm:descriptor:com.tectonic.ui:label'
         version: v1
   keywords:
     - mongodb
