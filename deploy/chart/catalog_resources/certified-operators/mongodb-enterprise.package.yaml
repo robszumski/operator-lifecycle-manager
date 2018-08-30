@@ -2,4 +2,4 @@
 packageName: mongodb-enterprise
 channels:
 - name: stable
-  currentCSV: mongodboperator.v0.3
+  currentCSV: mongodboperator.v0.3.2
