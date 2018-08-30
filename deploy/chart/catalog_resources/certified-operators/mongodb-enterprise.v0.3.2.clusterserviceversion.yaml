@@ -136,7 +136,7 @@ spec:
     - mongodb
     - database
     - nosql
-  displayName: mongodb
+  displayName: MongoDB
   provider:
     name: 'MongoDB, Inc'
   maturity: stable
